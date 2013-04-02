@@ -1,0 +1,17 @@
+<div class="container">
+  <form id="post" action="/posts" method="post" name="post">
+    <fieldset name="post">
+      <select name="category">
+        <% @categories.each do |c| %>
+          <option value="<%= c.id %>"><%= c.name %></option>
+        <% end %>
+      </select>
+      <input type="text" name="title" placeholder="Title"><br>
+      <input type="text" name="price" placeholder="Price"><br>
+      <input type="text" name="email" placeholder="E-mail"><br>
+      <textarea placeholder="Description goes here...." name="description">
+      </textarea>
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+</div>
