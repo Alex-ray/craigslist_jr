@@ -3,28 +3,28 @@
 <% if @post %>
   <form id="post" action="/posts/<%= @post.id %>" method="post" name="post">
     <fieldset name="post">
-      <select name="category">
+      <select name="category_id">
         <% @categories.each do |c| %>
           <option value="<%= c.id %>"><%= c.name %></option>
         <% end %>
       </select>      
-        <input type="text" name="title" placeholder="Title" value="<%= @post.title %>"><br>
-        <input type="text" name="price" placeholder="Price" value="<%= @post.price %>"><br>
-        <input type="text" name="email" placeholder="E-mail" value="<%= @post.email %>"><br>
-        <textarea placeholder="Description goes here...." name="description"><%= @post.description %></textarea>
+        <input type="text" name="post[title]" placeholder="Title" value="<%= @post.title %>"><br>
+        <input type="text" name="post[price]" placeholder="Price" value="<%= @post.price %>"><br>
+        <input type="text" name="post[email]" placeholder="E-mail" value="<%= @post.email %>"><br>
+        <textarea placeholder="Description goes here...." name="post[description]"><%= @post.description %></textarea>
 <% else %>
   <form id="post" action="/posts" method="post" name="post">
     <fieldset name="post">
-      <select name="category">
+      <select name="category_id">
         <% @categories.each do |c| %>
           <option value="<%= c.id %>"><%= c.name %></option>
         <% end %>
       </select>      
 
-      <input type="text" name="title" placeholder="Title"><br>
-      <input type="text" name="price" placeholder="Price"><br>
-      <input type="text" name="email" placeholder="E-mail"><br>
-      <textarea placeholder="Description goes here...." name="description"></textarea>
+      <input type="text" name="post[title]" placeholder="Title"><br>
+      <input type="text" name="post[price]" placeholder="Price"><br>
+      <input type="text" name="post[email]" placeholder="E-mail"><br>
+      <textarea placeholder="Description goes here...." name="post[description]"></textarea>
 <% end %>
       <input type="submit" value="Submit">
     </fieldset>

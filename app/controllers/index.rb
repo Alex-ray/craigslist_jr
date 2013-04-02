@@ -37,14 +37,12 @@ end
 
 post '/posts/:id' do
   @post = Post.find(params[:id])
-  @post.update_attributes(params)
+  @post.update_attributes(params[:post])
   redirect to "/posts/#{params[:id]}"
 end
 
 
 def make_post(params)
-  category = Category.find(params[:category])
-  category.posts.create(title: params[:title], email: params[:email],
-                        price: params[:price], description: params[:description])
-
+  category = Category.find(params[:category_id])
+  category.posts.create(params[:post])
 end
