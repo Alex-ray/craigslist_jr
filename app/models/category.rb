@@ -1,3 +1,6 @@
 class Category < ActiveRecord::Base
-  # Remember to create a migration!
+  attr_accessible :name
+
+  
+  has_many :posts
 end
