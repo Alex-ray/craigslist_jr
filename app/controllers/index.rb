@@ -19,20 +19,26 @@ get '/posts/:id' do
 end
 
 get '/posts/:id/edit/:key' do
-
-  erb :post_form
+  @post = Post.find(params[:id])
+  if @post.secret_key == params[:key]
+    @categories = Category.all
+    erb :post_form
+  else
+    "access denied"
+  end
 end
 
 
 post '/posts' do
   #logic to create
   post = make_post(params)
-  redirect to "/posts/#{post.id}"
+  redirect to "/posts/#{post.id}?new=true"
 end
 
 post '/posts/:id' do
-  #update post
-  redirect to '/posts/'#THE ID
+  @post = Post.find(params[:id])
+  @post.update_attributes(params)
+  redirect to "/posts/#{params[:id]}"
 end
 
 

@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
   attr_accessible :title, :description, :price, :email
-  before_save :generate_secret_key
+  before_create :generate_secret_key
   
   belongs_to :category
 

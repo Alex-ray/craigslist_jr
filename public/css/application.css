@@ -3,7 +3,25 @@
   width: 80%;
 }
 h1 {
-  width: 80%;
+  width: 100%;
   text-align: center;
-  font-size: em;
+}
+
+nav {
+  text-align: center;
+  padding: 0 5em;
+}
+
+nav ul {
+  padding: 0;
+  background-color: rgb(215,217,219);
+  line-height: 3em;
+  border-radius: 30px;
+}
+nav ul li {
+  text-align: center;
+  padding-right: 2em;
+  padding-left: 2em;
+  display: inline;
+  list-style-type: none;
 }
