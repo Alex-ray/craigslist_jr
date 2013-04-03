@@ -15,8 +15,8 @@ def seed_posts
   categories = Category.all
   100.times do
     category = categories.sample
-    category.posts.create(title: Faker::Lorem.words(2), 
-                          description: Faker::Lorem.paragraphs(3),
+    category.posts.create(title: Faker::Lorem.words(2).join(" "), 
+                          description: Faker::Lorem.paragraphs(3).join("\n"),
                           price: rand(59..999),
                           email: Faker::Internet.email)
   end

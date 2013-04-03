@@ -1,3 +1,7 @@
+html, body {
+  background-color: rgb(235,237,239);
+}
+
 .container {
   margin: 0 auto;
   width: 80%;
@@ -5,23 +9,164 @@
 h1 {
   width: 100%;
   text-align: center;
+  color: rgb(185,187,189);
+  text-shadow: 0px 1px rgb(125,127,129), 0px -1px rgb(245,247,249);
+}
+
+h1:hover {
+  text-shadow: 0px -1px rgb(125,127,129), 0px 1px rgb(245,247,249);
+  cursor: pointer;
 }
 
 nav {
   text-align: center;
-  padding: 0 5em;
+  margin: 0 auto;
+  width: 80%;
 }
 
 nav ul {
   padding: 0;
-  background-color: rgb(215,217,219);
+  background-color: rgb(185,187,189);
   line-height: 3em;
-  border-radius: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 1px rgb(125,127,129), 0px -1px rgb(245,247,249);
 }
+
 nav ul li {
   text-align: center;
-  padding-right: 2em;
-  padding-left: 2em;
+  margin-right: 1em;
+  margin-left: 1em;
+  padding-right: 1em;
+  padding-left: 1em;
+  padding-top: .5em;
+  padding-bottom: .5em;
   display: inline;
   list-style-type: none;
+  color: rgb(235,237,239);
+  text-shadow: 0px 1px rgb(125,127,129), 0px -1px rgb(245,247,249);
+  font-size: 1.25em;
 }
+
+nav ul li:hover {
+  background-color: rgb(235,237,239);
+  border-radius: 20px;
+  color: rgb(185,187,189);
+  text-shadow: 0px 1px rgb(125,127,129), 0px -1px rgb(245,247,249);
+  box-shadow: 0px -1px rgb(125,127,129), 0px 1px rgb(245,247,249);
+}
+nav ul li a {
+  text-decoration: none;
+  border-radius: 5px;
+  color: inherit;
+}
+
+section#categories div {
+  text-align: center;
+  color: gray;
+  width: 100%;
+  margin-top: 2em;
+  background-color: rgb(185,187,189);
+  border-radius: 10px;
+  box-shadow: 0px 1px rgb(125,127,129), 0px -1px rgb(245,247,249);
+}
+
+section#categories div a {
+  width: 100%;
+  height: 100%;
+  padding: 2%;
+  display: block;
+  color: rgb(245,247,248);
+  text-decoration: none;
+  text-shadow: 0px -1px rgb(125,127,129), 0px 1px rgb(245,247,249);
+}
+
+section#categories div:hover {
+  box-shadow: 0px -1px rgb(125,127,129), 0px 1px rgb(245,247,249);
+}
+
+section#categories div a:hover {
+  text-shadow: 0px 1px rgb(125,127,129), 0px -1px rgb(245,247,249);
+}
+
+article.post {
+  background-color: rgb(185,187,189);
+  border-radius: 10px;
+  padding: .75em;
+  margin-top: 1em;
+  position: relative;
+  box-shadow: 0px 1px rgb(125,127,129), 0px -1px rgb(245,247,249);
+}
+
+article.post h1 {
+  padding: 0;
+  margin: 0;
+  width: 30%;
+  display: inline;
+  color: rgb(245,247,249);
+}
+
+article.post h1 a {
+  padding: .5em;
+  display: inline-block;
+  color: white; 
+  text-decoration: none;
+  padding: .5em;
+  border-radius: 20px;
+
+}
+
+article.post h1 a:hover {
+  background-color: rgb(235,237,239);
+  text-shadow: 0px 1px rgb(125,127,129), 0px -1px rgb(245,247,249);
+  color: rgb(185,187,189);
+  box-shadow: 0px -1px rgb(125,127,129), 0px 1px rgb(245,247,249);
+}
+
+article.post p {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(235,237,239);
+  display: inline-block;
+  float: right;
+  margin-right: 2.5%;
+  padding: .5em;
+  border-radius: 20px;
+  color: rgb(185,187,189);
+  text-shadow: 0px 1px rgb(125,127,129), 0px -1px rgb(245,247,249);
+  box-shadow: 0px -1px rgb(125,127,129), 0px 1px rgb(245,247,249);
+}
+
+p.description {
+  background-color: rgb(185,187,189);
+  border-radius: 10px;
+  padding: 1em;
+  display: block;
+  float: none;
+  margin-top: 1em;
+  color: rgb(245,247,249);
+  text-shadow: 0px 1px rgb(125,127,129), 0px -1px rgb(245,247,249);
+  box-shadow: 0px 1px rgb(125,127,129), 0px -1px rgb(245,247,249);
+}
+
+article.post p.email {
+  display: inline-block;
+  float: none;
+  margin-left: 4em;
+  text-shadow: none;
+  box-shadow: none;
+  background-color: rgb(185,187,189);
+  color: rgb(245,247,249);
+}
+
+article.post p.price {
+  display: inline-block;
+  float: right;
+  margin-left: 4em;
+}
+
+
+
+
+
+
+

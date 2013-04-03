@@ -20,12 +20,14 @@ end
 
 get '/posts/:id/edit/:key' do
   @post = Post.find(params[:id])
+
   if @post.secret_key == params[:key]
     @categories = Category.all
     erb :post_form
   else
     "access denied"
   end
+  
 end
 
 

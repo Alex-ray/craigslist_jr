@@ -1,7 +1,7 @@
 <div class="container">
-  <secion id="catagories">
+  <section id="categories">
     <% @categories.each do |c| %>
-      <div><a href="/categories/<%= c.id %>/posts"><%=  c.name %></div>
+      <div><a href="/categories/<%= c.id %>/posts"><%=  c.name %></a></div>
     <% end %>
   </section>
 </div>

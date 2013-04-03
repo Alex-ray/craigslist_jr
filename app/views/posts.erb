@@ -1,9 +1,9 @@
-<div id="container">
+<div class="container">
   <section id="posts">
     <% @posts.each do |p|%>
     <article class="post">
       <h1><a href="/posts/<%= p.id %>"><%= p.title %></a></h1>
-      <p><%= p.price %></p>
+      <p>$ <%= p.price %></p>
     </article>
     <%end%>
   </section>

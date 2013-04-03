@@ -5,8 +5,8 @@
       <% if params[:new] == "true" %>
         Save this link to edit in future: <a href="/posts/<%= @post.id %>/edit/<%= @post.secret_key %>">/posts/<%= @post.id %>/edit/<%= @post.secret_key %></a>
       <% end %>
-      <span><%= @post.email %></span>
-      <span><%= @post.price %></span>
-      <p><%= @post.description %></p>
+      <p class="email"><%= @post.email %></p>
+      <p class="price">$ <%= @post.price %></p>
   </section>
+  <p class="description"><%= @post.description %></p>
 </div>
