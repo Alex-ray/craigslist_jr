@@ -4,6 +4,15 @@ class Post < ActiveRecord::Base
   
   belongs_to :category
 
+  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
+  validates :title,       presence: true
+  validates :email, :presence => true,
+                    :format   => { :with => email_regex }  
+  validates :description, presence: true
+
+
+
 
   private
 

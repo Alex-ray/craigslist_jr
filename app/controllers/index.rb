@@ -32,7 +32,11 @@ end
 post '/posts' do
   #logic to create
   post = make_post(params)
-  redirect to "/posts/#{post.id}?new=true"
+  if post.id
+    redirect to "/posts/#{post.id}?new=true"
+  else
+    "missing fields or incorrect info"
+  end
 end
 
 post '/posts/:id' do
